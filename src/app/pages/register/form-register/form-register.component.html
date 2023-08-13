@@ -1,0 +1,58 @@
+<div class="container">
+  <form [formGroup]="formTeamRegister" >
+
+    <div class="row">
+      <div class="col-sm-4 form">
+          <label>Nome do Time :</label>
+          <input type="text" required formControlName="nome">
+
+          <label>Resistencia :</label>
+          <select name="resistencia" formControlName="resistencia">
+            <option value="0" selected>Selecione</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+
+          <label>Força :</label>
+          <select name="forca" formControlName="forca">
+            <option value="0" selected>Selecione</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+
+          <label>Agilidade:</label>
+          <select name="agilidade" formControlName="agilidade">
+            <option value="0" selected>Selecione</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+      </div>
+      <div class="col-sm-8">
+        <h5>Como seu time se parece?</h5>
+        <div *ngFor="let image of images; let i = index" class="boxImages">
+          <img [src]="image.url" (click)="handleImageClick(image)" [ngClass]="{'clicked': i == clickedElement-1 }">
+          
+        </div>
+
+      </div>
+
+    </div>
+    <div class="row bot">
+      <button (click)="concluir()" *ngIf="this.teamService.getTeams().length > 4">Concluir</button>
+      <button (click)="cadastrar()" *ngIf="this.teamService.getTeams().length < 6">Proximo</button>
+    </div>
+
+  </form>
+</div>

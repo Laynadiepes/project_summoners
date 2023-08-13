@@ -1,0 +1,25 @@
+<div class="container">
+    <img src="../../../assets/images/logo.png">
+
+    <img *ngIf="this.finalist == null" width="80%" class="titleRegister" src="../../../assets/images/finalists.png">
+
+    <img *ngIf="this.finalist" width="80%" class="titleRegister" src="../../../assets/images/campeao.png">
+
+    <div class="semi" *ngIf="this.finalist == null">
+        <div class="finalistOne">
+            <app-card [team]="this.semifinalists[0]"></app-card>
+        </div>
+        <h1>x</h1>
+        <div class="finalistTwo">
+            <app-card [team]="this.semifinalists[1]"></app-card>
+        </div>      
+    </div>
+
+    <div class="final" *ngIf="this.finalist">
+        <div class="finalist">
+            <app-card [team]="this.finalist"></app-card>
+        </div>   
+    </div>
+
+    <button *ngIf="this.finalist == null" (click)="fight()">Disputar</button>
+</div>

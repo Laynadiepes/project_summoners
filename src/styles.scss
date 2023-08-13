@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background: url(./assets/images/tela.png);
+    background-size: cover;
+    min-height: 60vh;
+    font-family: 'nicoMoji';
+  }
+
+  @font-face {
+    font-family: 'nicoMoji';
+    src: url('./assets/fonts/NicoMoji-Regular.ttf'),
+    /* Adicione outros atributos da fonte conforme necessário */
+  }

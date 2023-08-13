@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        color: white;
+    }
+
+    .titleRegister{
+        margin-top: 4rem;
+    }
+
+    .form{
+        margin-top: 4rem;
+        width: 80%;
+        height: 400px;
+        background-color: #2CC055;
+        border-radius: 40px;
+        padding: 50px;
+    }
+
+
+}
