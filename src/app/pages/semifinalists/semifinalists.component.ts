@@ -10,7 +10,7 @@ import { RegisterService } from 'src/app/services/register.service';
 })
 export class SemifinalistsComponent {
 
-  semifinalists: TeamModel []=[];
+  semifinalists: TeamModel[] = [];
   finalist!: TeamModel
 
   constructor(
@@ -22,15 +22,19 @@ export class SemifinalistsComponent {
     this.semifinalists = this.teamService.getSemiFinalists();
   }
 
-  fight(){
+  fight() {
     this.teamService.setFinalist(this.pickRandom());
     this.finalist = this.teamService.getFinalist();
   }
 
-  pickRandom(){
+  pickRandom() {
     const randomIndex = Math.floor(Math.random() * this.semifinalists.length);
     const elementoEscolhido = this.semifinalists[randomIndex];
     return elementoEscolhido;
   }
 
+  newTournament() {
+    this.teamService.newTornament();
+    this.router.navigate(['']);
+  }
 }

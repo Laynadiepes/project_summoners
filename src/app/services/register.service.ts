@@ -40,4 +40,8 @@ export class RegisterService {
   getFinalist() {
       return this.finalist;
   }
+
+  newTornament(){
+    this.teams= [];
+  }
 }

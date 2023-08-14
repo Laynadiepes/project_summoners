@@ -13,12 +13,12 @@
         <div class="row tournament">
             <div class="col-sm-4">
                 <img *ngIf="this.listImages.length>0" class="tournamentCard one" [src]="this.listImages[0].urlImagem">
-                <b *ngIf="this.listImages.length>0" >x</b>
+                <b *ngIf="this.listImages.length>0" >  x  </b>
                 <img  *ngIf="this.listImages.length>1"  class="tournamentCard two" [src]="this.listImages[1].urlImagem">
             </div>
             <div class="col-sm-4">
                 <img  *ngIf="this.listImages.length>2"  class="tournamentCard tree" [src]="this.listImages[2].urlImagem">
-                <b  *ngIf="this.listImages.length>2" >x</b>
+                <b  *ngIf="this.listImages.length>2" >  x  </b>
                 <img  *ngIf="this.listImages.length>3"  class="tournamentCard four" [src]="this.listImages[3].urlImagem">
             </div>
         </div>

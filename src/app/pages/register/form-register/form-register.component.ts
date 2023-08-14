@@ -47,6 +47,7 @@ export class FormRegisterComponent {
       model.urlImagem= this.url;
       console.log(model);
       this.teamService.registerTeam(model);
+      alert("Time cadastrado com sucesso!")
       this.formInitialize();
     } else {
       alert("favor preencher o formulario corretamente");

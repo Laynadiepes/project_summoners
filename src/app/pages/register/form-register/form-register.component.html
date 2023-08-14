@@ -50,7 +50,7 @@
 
     </div>
     <div class="row bot">
-      <button (click)="concluir()" *ngIf="this.teamService.getTeams().length > 4">Concluir</button>
+      <button (click)="concluir()" *ngIf="this.teamService.getTeams().length > 3">Concluir</button>
       <button (click)="cadastrar()" *ngIf="this.teamService.getTeams().length < 6">Proximo</button>
     </div>
 
